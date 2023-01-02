@@ -1,3 +1,4 @@
+/* CSS for Card-Component */
 .card{
     background-color: #ffffff;
     border: 1px solid #e6e6e6;
@@ -89,3 +90,75 @@
     border-style: solid;
     border-color: transparent transparent gray transparent;
 }
+/* End of CSS for Card-Component */
+
+/* CSS for Carrousel */
+.slider{
+    width: 50%;
+    margin: 200px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider{
+    scroll-behavior: smooth;
+}
+
+#backwards{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #1f1f1f;
+    cursor: pointer;
+    z-index: 1;
+    left: .5%;
+}
+
+#forwards{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #1f1f1f;
+    cursor: pointer;
+    z-index: 1;
+    right: .5%;
+}
+
+.slider section{
+    width: 98%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: left;
+    overflow-x: auto;
+}
+section::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.slider .card{
+    margin: 25px;
+    transition: 0.5s;
+}
+
+@media(max-width: 768px){
+    .slider{
+        width: 82.5%;
+    }
+    .slider .card{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider{
+        width: 55%;
+    }
+    .slider .card{
+        margin: 10px;
+    }
+}
+
+
